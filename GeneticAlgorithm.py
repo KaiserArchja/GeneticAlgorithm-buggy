@@ -1,7 +1,7 @@
 import random
 global goal
 answer = ""
-goal = input("Please write your goal: ")
+goal = input("Please write your goal: ") #Input
 goal = goal.lower()
 
 def fitness(test):
@@ -38,7 +38,9 @@ def create_first_pop(num):
     for i in range(num):
         l.append(startPopulation())
     return l
+
 initial_pop = create_first_pop(60) #initial population
+
 father = ""
 mother = ""
 text =""
