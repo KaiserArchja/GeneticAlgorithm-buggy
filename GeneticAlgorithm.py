@@ -43,7 +43,6 @@ father = ""
 mother = ""
 text =""
 while (text != goal):
-    #initial_pop = sorter(initial_pop)
     initial_pop.sort(key=fitness)
     father = initial_pop[0]
     mother =initial_pop[1]
