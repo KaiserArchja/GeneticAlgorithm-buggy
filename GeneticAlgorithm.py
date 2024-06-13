@@ -3,14 +3,6 @@ global goal
 answer = ""
 goal = input("Please write your goal: ")
 goal = goal.lower()
-def sorter(test):
-    for i in range(len(test)):
-        for j in range(len(test)):
-            if fitness(test[i]) <= fitness(test[j]):
-                helper = test[i]
-                test[i] = test[j]
-                test[j] = helper
-    return test
 
 def fitness(test):
     score = 0
@@ -51,7 +43,8 @@ father = ""
 mother = ""
 text =""
 while (text != goal):
-    initial_pop = sorter(initial_pop)
+    #initial_pop = sorter(initial_pop)
+    initial_pop.sort(key=fitness)
     father = initial_pop[0]
     mother =initial_pop[1]
     text = child(father, mother)
